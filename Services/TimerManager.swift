@@ -1,18 +1,21 @@
-//
-//  TimerManager.swift
-//  TaskMasterPro
-//
-//  Created by Joshua Shirreffs on 10/9/24.
-//
+import Foundation
+import CoreData
 
-import SwiftUI
+class TimerManager {
+    static let shared = TimerManager()
+    private var timer: Timer?
 
-struct TimerManager: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    func startTimer(context: NSManagedObjectContext) {
+        // Invalidate the existing timer if it exists
+        stopTimer()
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 86400, repeats: true) { _ in
+            RecurrenceManager.shared.checkForRecurringTaskItems(context: context)
+        }
     }
-}
 
-#Preview {
-    TimerManager()
+    func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
 }

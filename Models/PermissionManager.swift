@@ -1,18 +1,12 @@
-//
-//  PermissionManager.swift
-//  TaskMasterPro
-//
-//  Created by Joshua Shirreffs on 10/9/24.
-//
+import Foundation
+import CoreData
 
-import SwiftUI
+class PermissionManager {
+    static let shared = PermissionManager()
 
-struct PermissionManager: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    func userHasPermission(_ user: User, permissionName: String) -> Bool {
+        guard let role = user.role as? Role else { return false }
+        guard let permissions = role.permissions as? Set<Permission> else { return false }
+        return permissions.contains { $0.name == permissionName }
     }
-}
-
-#Preview {
-    PermissionManager()
 }

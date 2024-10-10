@@ -1,18 +1,13 @@
-//
-//  CustomField.swift
-//  TaskMasterPro
-//
-//  Created by Joshua Shirreffs on 10/9/24.
-//
+import Foundation
 
-import SwiftUI
+struct CustomField: Codable, Identifiable {
+    let id: UUID
+    var key: String
+    var value: String
 
-struct CustomField: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    init(key: String, value: String) {
+        self.id = UUID()
+        self.key = key
+        self.value = value
     }
-}
-
-#Preview {
-    CustomField()
 }

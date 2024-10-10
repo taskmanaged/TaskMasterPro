@@ -1,18 +1,7 @@
-//
-//  TasksByStatusReport.swift
-//  TaskMasterPro
-//
-//  Created by Joshua Shirreffs on 10/9/24.
-//
-
 import SwiftUI
 
-struct TasksByStatusReport: View {
+struct TaskItemsByStatusReport: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("TaskItems By Status Report")
     }
-}
-
-#Preview {
-    TasksByStatusReport()
 }

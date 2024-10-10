@@ -1,18 +1,22 @@
-//
-//  SidebarView.swift
-//  TaskMasterPro
-//
-//  Created by Joshua Shirreffs on 10/9/24.
-//
-
 import SwiftUI
 
 struct SidebarView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                NavigationLink(destination: TaskItemListView()) {
+                    Label("TaskItems", systemImage: "checklist")
+                }
+                NavigationLink(destination: UserManagementView()) {
+                    Label("Users", systemImage: "person.3")
+                }
+                NavigationLink(destination: ReportsView()) {
+                    Label("Reports", systemImage: "chart.bar") // Updated system image
+                }
+                // Add more navigation items as needed
+            }
+            .listStyle(SidebarListStyle())
+            .navigationTitle("TaskItemMaster Pro")
+        }
     }
-}
-
-#Preview {
-    SidebarView()
 }

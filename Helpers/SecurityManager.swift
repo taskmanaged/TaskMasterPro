@@ -1,18 +1,14 @@
-//
-//  SecurityManager.swift
-//  TaskMasterPro
-//
-//  Created by Joshua Shirreffs on 10/9/24.
-//
+import Foundation
+import CryptoKit
 
-import SwiftUI
-
-struct SecurityManager: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class SecurityManager {
+    static func hashPassword(_ password: String) -> String {
+        let data = Data(password.utf8)
+        let hash = SHA256.hash(data: data)
+        return hash.compactMap { String(format: "%02x", $0) }.joined()
     }
-}
 
-#Preview {
-    SecurityManager()
+    static func verifyPassword(_ password: String, hash: String) -> Bool {
+        return hashPassword(password) == hash
+    }
 }

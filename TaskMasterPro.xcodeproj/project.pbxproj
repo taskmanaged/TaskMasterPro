@@ -6,13 +6,106 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4C6328842CB702FE005529B1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328832CB702FE005529B1 /* MainView.swift */; };
+		4C6328862CB7031C005529B1 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328852CB7031C005529B1 /* SidebarView.swift */; };
+		4C6328882CB7033B005529B1 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328872CB7033B005529B1 /* TaskListView.swift */; };
+		4C63288A2CB70352005529B1 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328892CB70352005529B1 /* TaskDetailView.swift */; };
+		4C63288C2CB70364005529B1 /* TaskEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63288B2CB70364005529B1 /* TaskEditorView.swift */; };
+		4C63288E2CB70373005529B1 /* UserManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63288D2CB70373005529B1 /* UserManagementView.swift */; };
+		4C6328902CB70389005529B1 /* UserEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63288F2CB70389005529B1 /* UserEditorView.swift */; };
+		4C6328922CB703D4005529B1 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328912CB703D4005529B1 /* PermissionManager.swift */; };
+		4C6328942CB706B9005529B1 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328932CB706B9005529B1 /* UserSession.swift */; };
+		4C6328962CB706D2005529B1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328952CB706D2005529B1 /* LoginView.swift */; };
+		4C6328982CB70826005529B1 /* TimeTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328972CB70826005529B1 /* TimeTrackingView.swift */; };
+		4C63289A2CB708AF005529B1 /* RecurrenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328992CB708AF005529B1 /* RecurrenceManager.swift */; };
+		4C63289C2CB708FF005529B1 /* CustomField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63289B2CB708FF005529B1 /* CustomField.swift */; };
+		4C63289E2CB709E6005529B1 /* Task+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63289D2CB709E6005529B1 /* Task+Extensions.swift */; };
+		4C6328A02CB70A8D005529B1 /* CustomFieldEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63289F2CB70A8D005529B1 /* CustomFieldEditorView.swift */; };
+		4C6328A22CB70DBD005529B1 /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328A12CB70DBD005529B1 /* ReportsView.swift */; };
+		4C6328A42CB70DD9005529B1 /* ReportContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328A32CB70DD9005529B1 /* ReportContentView.swift */; };
+		4C6328A62CB70DF4005529B1 /* TasksByStatusReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328A52CB70DF4005529B1 /* TasksByStatusReport.swift */; };
+		4C6328A82CB70E08005529B1 /* TasksByUserReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328A72CB70E08005529B1 /* TasksByUserReport.swift */; };
+		4C6328AA2CB70E17005529B1 /* TimeSpentPerTaskReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328A92CB70E17005529B1 /* TimeSpentPerTaskReport.swift */; };
+		4C6328AC2CB71881005529B1 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328AB2CB71881005529B1 /* PersistenceController.swift */; };
+		4C6328AE2CB71B53005529B1 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328AD2CB71B53005529B1 /* TimerManager.swift */; };
+		4C6328B02CB71F56005529B1 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328AF2CB71F56005529B1 /* RegistrationView.swift */; };
+		4C6328B22CB71FCD005529B1 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328B12CB71FCD005529B1 /* PasswordResetView.swift */; };
+		4C6328B42CB722F8005529B1 /* SecurityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328B32CB722F8005529B1 /* SecurityManager.swift */; };
+		4C6328BD2CB72F32005529B1 /* TaskItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328BB2CB72F32005529B1 /* TaskItem+CoreDataClass.swift */; };
+		4C6328BE2CB72F32005529B1 /* TaskItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328BC2CB72F32005529B1 /* TaskItem+CoreDataProperties.swift */; };
+		4C6328D22CB76CD7005529B1 /* Role+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328CF2CB76CD7005529B1 /* Role+CoreDataClass.swift */; };
+		4C6328D32CB76CD7005529B1 /* Role+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328D02CB76CD7005529B1 /* Role+CoreDataProperties.swift */; };
+		4C6328D42CB76CD7005529B1 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328D12CB76CD7005529B1 /* User+CoreDataProperties.swift */; };
+		4C6328D52CB76CD7005529B1 /* Permission+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328CD2CB76CD7005529B1 /* Permission+CoreDataClass.swift */; };
+		4C6328D62CB76CD7005529B1 /* Permission+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328CE2CB76CD7005529B1 /* Permission+CoreDataProperties.swift */; };
+		4C6328D82CB76F41005529B1 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6328D72CB76F41005529B1 /* User+CoreDataClass.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		4C6328622CB6FF76005529B1 /* TaskMasterPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskMasterPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C6328832CB702FE005529B1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4C6328852CB7031C005529B1 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		4C6328872CB7033B005529B1 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		4C6328892CB70352005529B1 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
+		4C63288B2CB70364005529B1 /* TaskEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditorView.swift; sourceTree = "<group>"; };
+		4C63288D2CB70373005529B1 /* UserManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementView.swift; sourceTree = "<group>"; };
+		4C63288F2CB70389005529B1 /* UserEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditorView.swift; sourceTree = "<group>"; };
+		4C6328912CB703D4005529B1 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
+		4C6328932CB706B9005529B1 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		4C6328952CB706D2005529B1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4C6328972CB70826005529B1 /* TimeTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackingView.swift; sourceTree = "<group>"; };
+		4C6328992CB708AF005529B1 /* RecurrenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurrenceManager.swift; sourceTree = "<group>"; };
+		4C63289B2CB708FF005529B1 /* CustomField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomField.swift; sourceTree = "<group>"; };
+		4C63289D2CB709E6005529B1 /* Task+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Extensions.swift"; sourceTree = "<group>"; };
+		4C63289F2CB70A8D005529B1 /* CustomFieldEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFieldEditorView.swift; sourceTree = "<group>"; };
+		4C6328A12CB70DBD005529B1 /* ReportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView.swift; sourceTree = "<group>"; };
+		4C6328A32CB70DD9005529B1 /* ReportContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportContentView.swift; sourceTree = "<group>"; };
+		4C6328A52CB70DF4005529B1 /* TasksByStatusReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksByStatusReport.swift; sourceTree = "<group>"; };
+		4C6328A72CB70E08005529B1 /* TasksByUserReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksByUserReport.swift; sourceTree = "<group>"; };
+		4C6328A92CB70E17005529B1 /* TimeSpentPerTaskReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSpentPerTaskReport.swift; sourceTree = "<group>"; };
+		4C6328AB2CB71881005529B1 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		4C6328AD2CB71B53005529B1 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		4C6328AF2CB71F56005529B1 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		4C6328B12CB71FCD005529B1 /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
+		4C6328B32CB722F8005529B1 /* SecurityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityManager.swift; sourceTree = "<group>"; };
+		4C6328BB2CB72F32005529B1 /* TaskItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4C6328BC2CB72F32005529B1 /* TaskItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4C6328CD2CB76CD7005529B1 /* Permission+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Permission+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4C6328CE2CB76CD7005529B1 /* Permission+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Permission+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4C6328CF2CB76CD7005529B1 /* Role+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Role+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4C6328D02CB76CD7005529B1 /* Role+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Role+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4C6328D12CB76CD7005529B1 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4C6328D72CB76F41005529B1 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4C6328B72CB72D3F005529B1 /* Exceptions for "TaskMasterPro" folder in "TaskMasterPro" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				TaskMasterProModel.xcdatamodeld,
+			);
+			target = 4C6328612CB6FF76005529B1 /* TaskMasterPro */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		4C6328BA2CB72D5D005529B1 /* Exceptions for "TaskMasterPro" folder in "Copy Bundle Resources" phase from "TaskMasterPro" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 4C6328602CB6FF76005529B1 /* Resources */;
+			membershipExceptions = (
+				TaskMasterProModel.xcdatamodeld,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4C6328642CB6FF76005529B1 /* TaskMasterPro */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4C6328B72CB72D3F005529B1 /* Exceptions for "TaskMasterPro" folder in "TaskMasterPro" target */,
+				4C6328BA2CB72D5D005529B1 /* Exceptions for "TaskMasterPro" folder in "Copy Bundle Resources" phase from "TaskMasterPro" target */,
+			);
 			path = TaskMasterPro;
 			sourceTree = "<group>";
 		};
@@ -32,6 +125,13 @@
 		4C6328592CB6FF76005529B1 = {
 			isa = PBXGroup;
 			children = (
+				4C63287C2CB6FFB4005529B1 /* Resources */,
+				4C63287B2CB6FFAF005529B1 /* Helpers */,
+				4C63287A2CB6FFA7005529B1 /* Services */,
+				4C6328772CB6FF97005529B1 /* Controllers */,
+				4C6328762CB6FF91005529B1 /* ViewModels */,
+				4C6328752CB6FF8B005529B1 /* Views */,
+				4C6328742CB6FF87005529B1 /* Models */,
 				4C6328642CB6FF76005529B1 /* TaskMasterPro */,
 				4C6328632CB6FF76005529B1 /* Products */,
 			);
@@ -43,6 +143,88 @@
 				4C6328622CB6FF76005529B1 /* TaskMasterPro.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4C6328742CB6FF87005529B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C6328912CB703D4005529B1 /* PermissionManager.swift */,
+				4C63289B2CB708FF005529B1 /* CustomField.swift */,
+				4C63289D2CB709E6005529B1 /* Task+Extensions.swift */,
+				4C6328D72CB76F41005529B1 /* User+CoreDataClass.swift */,
+				4C6328CD2CB76CD7005529B1 /* Permission+CoreDataClass.swift */,
+				4C6328CE2CB76CD7005529B1 /* Permission+CoreDataProperties.swift */,
+				4C6328CF2CB76CD7005529B1 /* Role+CoreDataClass.swift */,
+				4C6328D02CB76CD7005529B1 /* Role+CoreDataProperties.swift */,
+				4C6328D12CB76CD7005529B1 /* User+CoreDataProperties.swift */,
+				4C6328BB2CB72F32005529B1 /* TaskItem+CoreDataClass.swift */,
+				4C6328BC2CB72F32005529B1 /* TaskItem+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4C6328752CB6FF8B005529B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C6328832CB702FE005529B1 /* MainView.swift */,
+				4C6328852CB7031C005529B1 /* SidebarView.swift */,
+				4C6328872CB7033B005529B1 /* TaskListView.swift */,
+				4C6328892CB70352005529B1 /* TaskDetailView.swift */,
+				4C63288B2CB70364005529B1 /* TaskEditorView.swift */,
+				4C63288D2CB70373005529B1 /* UserManagementView.swift */,
+				4C63288F2CB70389005529B1 /* UserEditorView.swift */,
+				4C6328952CB706D2005529B1 /* LoginView.swift */,
+				4C6328972CB70826005529B1 /* TimeTrackingView.swift */,
+				4C63289F2CB70A8D005529B1 /* CustomFieldEditorView.swift */,
+				4C6328A12CB70DBD005529B1 /* ReportsView.swift */,
+				4C6328A32CB70DD9005529B1 /* ReportContentView.swift */,
+				4C6328A52CB70DF4005529B1 /* TasksByStatusReport.swift */,
+				4C6328A72CB70E08005529B1 /* TasksByUserReport.swift */,
+				4C6328A92CB70E17005529B1 /* TimeSpentPerTaskReport.swift */,
+				4C6328AF2CB71F56005529B1 /* RegistrationView.swift */,
+				4C6328B12CB71FCD005529B1 /* PasswordResetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4C6328762CB6FF91005529B1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4C6328932CB706B9005529B1 /* UserSession.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4C6328772CB6FF97005529B1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4C63287A2CB6FFA7005529B1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4C6328992CB708AF005529B1 /* RecurrenceManager.swift */,
+				4C6328AD2CB71B53005529B1 /* TimerManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4C63287B2CB6FFAF005529B1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4C6328AB2CB71881005529B1 /* PersistenceController.swift */,
+				4C6328B32CB722F8005529B1 /* SecurityManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4C63287C2CB6FFB4005529B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +301,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C63288A2CB70352005529B1 /* TaskDetailView.swift in Sources */,
+				4C6328A62CB70DF4005529B1 /* TasksByStatusReport.swift in Sources */,
+				4C63288C2CB70364005529B1 /* TaskEditorView.swift in Sources */,
+				4C6328A42CB70DD9005529B1 /* ReportContentView.swift in Sources */,
+				4C63289C2CB708FF005529B1 /* CustomField.swift in Sources */,
+				4C6328AE2CB71B53005529B1 /* TimerManager.swift in Sources */,
+				4C6328982CB70826005529B1 /* TimeTrackingView.swift in Sources */,
+				4C6328922CB703D4005529B1 /* PermissionManager.swift in Sources */,
+				4C63288E2CB70373005529B1 /* UserManagementView.swift in Sources */,
+				4C6328A22CB70DBD005529B1 /* ReportsView.swift in Sources */,
+				4C6328A02CB70A8D005529B1 /* CustomFieldEditorView.swift in Sources */,
+				4C6328882CB7033B005529B1 /* TaskListView.swift in Sources */,
+				4C6328B02CB71F56005529B1 /* RegistrationView.swift in Sources */,
+				4C63289E2CB709E6005529B1 /* Task+Extensions.swift in Sources */,
+				4C6328962CB706D2005529B1 /* LoginView.swift in Sources */,
+				4C6328BD2CB72F32005529B1 /* TaskItem+CoreDataClass.swift in Sources */,
+				4C6328BE2CB72F32005529B1 /* TaskItem+CoreDataProperties.swift in Sources */,
+				4C6328B42CB722F8005529B1 /* SecurityManager.swift in Sources */,
+				4C6328902CB70389005529B1 /* UserEditorView.swift in Sources */,
+				4C63289A2CB708AF005529B1 /* RecurrenceManager.swift in Sources */,
+				4C6328A82CB70E08005529B1 /* TasksByUserReport.swift in Sources */,
+				4C6328842CB702FE005529B1 /* MainView.swift in Sources */,
+				4C6328D22CB76CD7005529B1 /* Role+CoreDataClass.swift in Sources */,
+				4C6328D32CB76CD7005529B1 /* Role+CoreDataProperties.swift in Sources */,
+				4C6328D42CB76CD7005529B1 /* User+CoreDataProperties.swift in Sources */,
+				4C6328D52CB76CD7005529B1 /* Permission+CoreDataClass.swift in Sources */,
+				4C6328D62CB76CD7005529B1 /* Permission+CoreDataProperties.swift in Sources */,
+				4C6328942CB706B9005529B1 /* UserSession.swift in Sources */,
+				4C6328AA2CB70E17005529B1 /* TimeSpentPerTaskReport.swift in Sources */,
+				4C6328862CB7031C005529B1 /* SidebarView.swift in Sources */,
+				4C6328AC2CB71881005529B1 /* PersistenceController.swift in Sources */,
+				4C6328B22CB71FCD005529B1 /* PasswordResetView.swift in Sources */,
+				4C6328D82CB76F41005529B1 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
