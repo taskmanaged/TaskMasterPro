@@ -1,10 +1,10 @@
 import Foundation
 import CoreData
 
-extension TaskMasterPro.User {
+extension User {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<TaskMasterPro.User> {
-        return NSFetchRequest<TaskMasterPro.User>(entityName: "User")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<User> {
+        return NSFetchRequest<User>(entityName: "User")
     }
 
     @NSManaged public var email: String?
@@ -13,18 +13,18 @@ extension TaskMasterPro.User {
     @NSManaged public var password: String?
     @NSManaged public var securityAnswer: String?
     @NSManaged public var securityQuestion: String?
-    @NSManaged public var role: TaskMasterPro.Role?
+    @NSManaged public var role: Role?
     @NSManaged public var taskAssigned: NSSet?
 }
 
 // MARK: Generated accessors for taskAssigned
-extension TaskMasterPro.User {
+extension User {
 
     @objc(addTaskAssignedObject:)
-    @NSManaged public func addToTaskAssigned(_ value: TaskMasterPro.TaskItem)
+    @NSManaged public func addToTaskAssigned(_ value: TaskItem)
 
     @objc(removeTaskAssignedObject:)
-    @NSManaged public func removeFromTaskAssigned(_ value: TaskMasterPro.TaskItem)
+    @NSManaged public func removeFromTaskAssigned(_ value: TaskItem)
 
     @objc(addTaskAssigned:)
     @NSManaged public func addToTaskAssigned(_ values: NSSet)
@@ -33,5 +33,5 @@ extension TaskMasterPro.User {
     @NSManaged public func removeFromTaskAssigned(_ values: NSSet)
 }
 
-extension TaskMasterPro.User : Identifiable {
+extension User : Identifiable {
 }
