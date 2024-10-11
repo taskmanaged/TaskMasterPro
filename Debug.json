@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "type": "swift",
+      "request": "launch",
+      "name": "Launch TaskMasterPro",
+      "program": "${workspaceFolder}/${input:programPath}",
+      "cwd": "${workspaceFolder}/TaskMasterPro"
+    }
+  ],
+  "inputs": [
+    {
+      "type": "pickString",
+      "id": "programPath",
+      "description": "Select the main Swift file to launch",
+      "options": [
+        "TaskMasterPro/ContentView.swift",
+        "TaskMasterPro/TaskMasterProApp.swift"
+      ]
+    }
+  ]
+}
