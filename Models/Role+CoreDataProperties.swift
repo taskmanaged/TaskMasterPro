@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension Role {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Role> {
@@ -18,7 +17,7 @@ extension Role {
 
     @NSManaged public var name: String?
     @NSManaged public var permissions: NSSet?
-    @NSManaged public var users: User?
+    @NSManaged public var users: TaskMasterPro.User? // Updated line
 
 }
 

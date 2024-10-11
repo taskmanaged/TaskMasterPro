@@ -17,6 +17,7 @@ class RecurrenceManager {
                     recreateTask(taskItem, context: context)
                 }
             }
+            try context.save() // Save the context after making changes
         } catch {
             print("Failed to fetch recurring task items: \(error)")
         }
@@ -38,7 +39,7 @@ class RecurrenceManager {
         newTaskItem.recurrenceRule = taskItem.recurrenceRule
 
         do {
-            try context.save()
+            try context.save() // Save the context after creating the new task
         } catch {
             print("Failed to save new task item: \(error)")
         }

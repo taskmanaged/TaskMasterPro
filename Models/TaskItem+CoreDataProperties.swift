@@ -8,12 +8,12 @@
 
 import Foundation
 import CoreData
+import TaskMasterProModels // Import the module where User and TaskItem are defined
 
+extension TaskMasterProModels.TaskItem {
 
-extension TaskItem {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<TaskItem> {
-        return NSFetchRequest<TaskItem>(entityName: "TaskItem")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<TaskMasterProModels.TaskItem> {
+        return NSFetchRequest<TaskMasterProModels.TaskItem>(entityName: "TaskItem")
     }
 
     @NSManaged public var customFields: NSObject?
@@ -27,10 +27,52 @@ extension TaskItem {
     @NSManaged public var timeEstimate: Double
     @NSManaged public var timeSpent: Double
     @NSManaged public var title: String?
-    @NSManaged public var assignedTo: User?
+    @NSManaged public var assignedTo: TaskMasterProModels.User? // Use fully qualified name
 
 }
 
-extension TaskItem : Identifiable {
+extension TaskMasterProModels.TaskItem : Identifiable {
+
+}
+
+//
+//  User+CoreDataProperties.swift
+//  TaskMasterPro
+//
+//  Created by Joshua Shirreffs on 10/9/24.
+//
+//
+
+import Foundation
+import CoreData
+import TaskMasterProModels // Import the module where User and TaskItem are defined
+
+extension User {
+
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<User> {
+        return NSFetchRequest<User>(entityName: "User")
+    }
+
+    @NSManaged public var id: UUID?
+    @NSManaged public var name: String?
+    @NSManaged public var email: String?
+    @NSManaged public var tasks: NSSet? // Use fully qualified name if needed
+
+    // Add convenience methods to manage the tasks relationship
+    @objc(addTasksObject:)
+    @NSManaged public func addToTasks(_ value: TaskMasterProModels.TaskItem) // Use fully qualified name
+
+    @objc(removeTasksObject:)
+    @NSManaged public func removeFromTasks(_ value: TaskMasterProModels.TaskItem) // Use fully qualified name
+
+    @objc(addTasks:)
+    @NSManaged public func addToTasks(_ values: NSSet)
+
+    @objc(removeTasks:)
+    @NSManaged public func removeFromTasks(_ values: NSSet)
+
+}
+
+extension User : Identifiable {
 
 }
