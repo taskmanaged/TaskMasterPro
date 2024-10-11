@@ -1,7 +1,7 @@
 import Foundation
 import CoreData
 
-extension User {
+public extension User {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<User> {
         return NSFetchRequest<User>(entityName: "User")
@@ -18,7 +18,7 @@ extension User {
 }
 
 // MARK: Generated accessors for taskAssigned
-extension User {
+public extension User {
 
     @objc(addTaskAssignedObject:)
     @NSManaged public func addToTaskAssigned(_ value: TaskItem)
