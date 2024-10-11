@@ -5,13 +5,19 @@ struct TaskMasterProApp: App {
     let persistenceController = PersistenceController.shared
     @StateObject private var userSession = UserSession() // Manage user session state
 
-    // Optional recurring TaskItem check (uncomment if you need this)
     init() {
-        // Ensure the Timer is scheduled correctly
-        Timer.scheduledTimer(withTimeInterval: 86400, repeats: true) { [weak self] _ in
+        // Use DispatchSourceTimer for precise scheduling
+        let timer = DispatchSource.makeTimerSource()
+        timer.schedule(deadline: .now(), repeating: 86400)
+        timer.setEventHandler { [weak self] in
             guard let self = self else { return }
-            RecurrenceManager.shared.checkForRecurringTaskItems(context: persistenceController.container.viewContext)
+            do {
+                try RecurrenceManager.shared.checkForRecurringTaskItems(context: persistenceController.container.viewContext)
+            } catch {
+                print("Error checking for recurring task items: \(error)")
+            }
         }
+        timer.resume()
     }
 
     var body: some Scene {
