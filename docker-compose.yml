@@ -10,7 +10,7 @@ services:
       - DB_USER=taskmaster_user
       - DB_PASSWORD=securepassword
       - DB_NAME=taskmasterpro_dev
-      - JWT_SECRET=nk90631a4xTfEEaxqdS+8Fgk/gfEHlWKtGA0zcPcM77pt86lweCyTF2pE1PPACpsKIPc3Jbei+sKnf7KH9LXXw==
+      - JWT_SECRET=nk90631a4xTfEEaxqdS+8Fgk/gfEHlWKtGA0zcPcM77pt86lweCyTF2pE1PPACpsKIPc3Jbei
     depends_on:
       - database
   frontend:
