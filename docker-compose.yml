@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   backend:
     build: ./backend
@@ -27,7 +26,7 @@ services:
       - POSTGRES_PASSWORD=GUm8Teth
       - POSTGRES_DB=taskmasterpro_dev
     ports:
-      - '5432:5432'
+      - '5433:5432'
     volumes:
       - db_data:/var/lib/postgresql/data
 volumes:
